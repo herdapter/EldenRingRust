@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elden Ring Twitch Extension</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background-overlay"></div>
+
+    <main>
+      <div class="container">
+        <div class="header">
+          <div class="logo">
+            <div class="logo-icon">⚔️</div>
+    <h1>Elden Ring Extension</h1>
+          </div>
+          <div class="version-badge">v1.0</div>
+        </div>
+
+        <div class="main-panel">
+          <div class="panel-header">
+            <h2>Configuration Twitch</h2>
+            <div class="status-indicator" id="statusIndicator">
+              <div class="status-light" id="statusLight"></div>
+              <span class="status-text" id="statusText">Déconnecté</span>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <label class="input-label">
+                <span class="label-text">📁 Fichier de sauvegarde Elden Ring</span>
+                <div class="file-input-wrapper">
+                  <input type="file" id="fileInput" class="file-input" accept=".sl2,.dat,.save" />
+                  <div class="file-input-display">
+                    <span class="file-placeholder">Sélectionner un fichier...</span>
+                    <button type="button" class="browse-btn">Parcourir</button>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">
+                <span class="label-text">Code de connection</span>
+                  <input type="text" id="textInput" class="text-input" placeholder="Votre code unique..." />
+              </label>
+            </div>
+
+            <div class="action-section">
+              <button id="connectBtn" class="primary-btn">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Connectexion</span>
+                <div class="btn-glow"></div>
+              </button>
+            </div>
+          </div>
+
+          <div class="info-panel">
+            <div class="info-item">
+              <span class="info-label">Status:</span>
+              <span class="info-value" id="connectionStatus">En attente</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value" id="fileStatus">Aucun fichier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
